@@ -60,6 +60,7 @@ Details and templates in [PATTERNS.md](PATTERNS.md).
 
 ## How this repo works
 
+- Start with [python-primer/](python-primer/README.md): the Python needed for LeetCode, in two days.
 - `problems/NNNN-slug/` holds `solution.*` and `NOTES.md` (front matter + notes).
 - Confidence is 1–5 and sets the next cold re-solve: 1 → 1 day, 2 → 3, 3 → 7, 4 → 14, 5 → 30, doubling for each consecutive 4+ (max 90).
 - `solved with help` means a hint or the editorial was used. Those always get re-solved.

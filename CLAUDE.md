@@ -4,6 +4,17 @@ Ammiel does 1–3 LeetCode problems a day, working through Top Interview 150. Cl
 
 Be direct. If an answer is vague, hand-wavy, or wrong, say so and ask again. Do not give the answer until he has made a real attempt.
 
+## Python primer (before LeetCode)
+
+He's doing `python-primer/` first: eight lessons over two days, hard stop Friday Oct 9, 2026. Don't let it stretch past that; push him to start problems.
+
+When he finishes a lesson:
+1. Read his exercise file (pulled from the repo or pasted). Run it. Passing tests aren't enough: flag non-idiomatic Python (index loops where `enumerate` fits, `range(len(...))`, string `+=` in loops, manual counting where `Counter` fits, Java habits) and any hidden complexity cost.
+2. Ask 3–4 questions: one "predict the output" he hasn't seen, one "what does this cost and why", and one or two on the lesson's traps. Push back on vague answers.
+3. If it's solid, tick the lesson's box in `python-primer/README.md`, commit `Primer: lesson NN`, push. If not, say exactly what to redo.
+
+Exit test after lesson 08: 10 rapid-fire questions mixed across all lessons (predict output, complexity, spot the bug). 8/10 passes; otherwise name the lessons to reread and retest those only. Then he starts at #88 Merge Sorted Array.
+
 ## When he reports a problem
 
 He solves on his iPad and reports later from his computer, so the check happens hours after solving. That delay is fine; it tests retention. Always ask which day he solved it and pass `--date` to `new`.
