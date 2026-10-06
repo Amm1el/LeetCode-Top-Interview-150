@@ -40,6 +40,21 @@ CATEGORIES = [
 ]
 PLAN_TOTAL = sum(n for _, n in CATEGORIES)
 
+# Chapter of LeetCode's Interview Crash Course to read before starting each section.
+# Chapter names follow LeetCode's announcement; adjust if the course's layout differs.
+CRASH_COURSE = {
+    "Array / String": "Arrays and strings", "Two Pointers": "Two pointers",
+    "Sliding Window": "Arrays and strings (sliding window)", "Matrix": "Arrays and strings",
+    "Hashmap": "Hashing", "Intervals": "Greedy", "Stack": "Stacks and queues",
+    "Linked List": "Linked lists", "Binary Tree General": "Trees and graphs",
+    "Binary Tree BFS": "Trees and graphs", "Binary Search Tree": "Trees and graphs",
+    "Graph General": "Trees and graphs", "Graph BFS": "Trees and graphs", "Trie": "Bonus",
+    "Backtracking": "Backtracking", "Divide & Conquer": "Trees and graphs (recursion)",
+    "Kadane's Algorithm": "Dynamic programming", "Binary Search": "Binary search",
+    "Heap": "Heaps", "Bit Manipulation": "", "Math": "",
+    "1D DP": "Dynamic programming", "Multidimensional DP": "Dynamic programming",
+}
+
 LANG_EXT = {"python": "py", "java": "java", "cpp": "cpp", "c++": "cpp", "javascript": "js",
             "typescript": "ts", "go": "go", "c": "c", "kotlin": "kt", "rust": "rs"}
 LANG_NAME = {"py": "Python", "java": "Java", "cpp": "C++", "js": "JavaScript",
@@ -287,10 +302,12 @@ def cmd_build(a) -> None:
         out.append("Nothing due.")
     out.append("")
 
-    out += ["## By category", "", "| Category | Done | |", "|---|---|---|"]
+    out += ["## By category", "",
+            "Before the first problem in a section, read its Interview Crash Course chapter.", "",
+            "| Category | Done | | Read first (Crash Course) |", "|---|---|---|---|"]
     for name, total in CATEGORIES:
         n = by_cat.get(name, 0)
-        out.append(f"| {name} | {n}/{total} | `{bar(n, total, 10)}` |")
+        out.append(f"| {name} | {n}/{total} | `{bar(n, total, 10)}` | {CRASH_COURSE.get(name) or '—'} |")
     out.append("")
 
     pats = defaultdict(list)

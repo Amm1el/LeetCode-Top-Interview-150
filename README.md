@@ -18,31 +18,33 @@ Nothing due.
 
 ## By category
 
-| Category | Done | |
-|---|---|---|
-| Array / String | 0/24 | `░░░░░░░░░░` |
-| Two Pointers | 0/5 | `░░░░░░░░░░` |
-| Sliding Window | 0/4 | `░░░░░░░░░░` |
-| Matrix | 0/5 | `░░░░░░░░░░` |
-| Hashmap | 0/9 | `░░░░░░░░░░` |
-| Intervals | 0/4 | `░░░░░░░░░░` |
-| Stack | 0/5 | `░░░░░░░░░░` |
-| Linked List | 0/11 | `░░░░░░░░░░` |
-| Binary Tree General | 0/14 | `░░░░░░░░░░` |
-| Binary Tree BFS | 0/4 | `░░░░░░░░░░` |
-| Binary Search Tree | 0/3 | `░░░░░░░░░░` |
-| Graph General | 0/6 | `░░░░░░░░░░` |
-| Graph BFS | 0/3 | `░░░░░░░░░░` |
-| Trie | 0/3 | `░░░░░░░░░░` |
-| Backtracking | 0/7 | `░░░░░░░░░░` |
-| Divide & Conquer | 0/4 | `░░░░░░░░░░` |
-| Kadane's Algorithm | 0/2 | `░░░░░░░░░░` |
-| Binary Search | 0/7 | `░░░░░░░░░░` |
-| Heap | 0/4 | `░░░░░░░░░░` |
-| Bit Manipulation | 0/6 | `░░░░░░░░░░` |
-| Math | 0/6 | `░░░░░░░░░░` |
-| 1D DP | 0/5 | `░░░░░░░░░░` |
-| Multidimensional DP | 0/9 | `░░░░░░░░░░` |
+Before the first problem in a section, read its Interview Crash Course chapter.
+
+| Category | Done | | Read first (Crash Course) |
+|---|---|---|---|
+| Array / String | 0/24 | `░░░░░░░░░░` | Arrays and strings |
+| Two Pointers | 0/5 | `░░░░░░░░░░` | Two pointers |
+| Sliding Window | 0/4 | `░░░░░░░░░░` | Arrays and strings (sliding window) |
+| Matrix | 0/5 | `░░░░░░░░░░` | Arrays and strings |
+| Hashmap | 0/9 | `░░░░░░░░░░` | Hashing |
+| Intervals | 0/4 | `░░░░░░░░░░` | Greedy |
+| Stack | 0/5 | `░░░░░░░░░░` | Stacks and queues |
+| Linked List | 0/11 | `░░░░░░░░░░` | Linked lists |
+| Binary Tree General | 0/14 | `░░░░░░░░░░` | Trees and graphs |
+| Binary Tree BFS | 0/4 | `░░░░░░░░░░` | Trees and graphs |
+| Binary Search Tree | 0/3 | `░░░░░░░░░░` | Trees and graphs |
+| Graph General | 0/6 | `░░░░░░░░░░` | Trees and graphs |
+| Graph BFS | 0/3 | `░░░░░░░░░░` | Trees and graphs |
+| Trie | 0/3 | `░░░░░░░░░░` | Bonus |
+| Backtracking | 0/7 | `░░░░░░░░░░` | Backtracking |
+| Divide & Conquer | 0/4 | `░░░░░░░░░░` | Trees and graphs (recursion) |
+| Kadane's Algorithm | 0/2 | `░░░░░░░░░░` | Dynamic programming |
+| Binary Search | 0/7 | `░░░░░░░░░░` | Binary search |
+| Heap | 0/4 | `░░░░░░░░░░` | Heaps |
+| Bit Manipulation | 0/6 | `░░░░░░░░░░` | — |
+| Math | 0/6 | `░░░░░░░░░░` | — |
+| 1D DP | 0/5 | `░░░░░░░░░░` | Dynamic programming |
+| Multidimensional DP | 0/9 | `░░░░░░░░░░` | Dynamic programming |
 
 ## By pattern
 

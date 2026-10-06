@@ -15,6 +15,10 @@ When he finishes a lesson:
 
 Exit test after lesson 08: 10 rapid-fire questions mixed across all lessons (predict output, complexity, spot the bug). 8/10 passes; otherwise name the lessons to reread and retest those only. Then he starts at #88 Merge Sorted Array.
 
+## Interview Crash Course
+
+He owns LeetCode's Interview Crash Course. It's the concept reference, not a separate track. `CRASH_COURSE` in `scripts/tracker.py` maps each Top 150 section to a chapter (also shown in the README's By category table). When he's about to start a section he has no problems in yet, ask whether he's read that chapter before he starts; if not, that comes first. Don't bring it up during the primer.
+
 ## When he reports a problem
 
 He solves on his iPad and reports later from his computer, so the check happens hours after solving. That delay is fine; it tests retention. Always ask which day he solved it and pass `--date` to `new`.
