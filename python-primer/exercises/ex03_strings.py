@@ -1,4 +1,4 @@
-"""03 · Strings. Replace each `raise NotImplementedError` and run: python3 ex03_strings.py"""
+"""03 · Strings. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
 from _check import eq
 
 

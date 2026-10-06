@@ -1,4 +1,4 @@
-"""04 · Dicts and sets. Replace each `raise NotImplementedError` and run: python3 ex04_dicts_sets.py"""
+"""04 · Dicts and sets. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
 from collections import Counter, defaultdict
 from _check import eq
 

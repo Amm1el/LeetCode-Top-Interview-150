@@ -4,27 +4,31 @@ The Python you need for Top Interview 150, and nothing else. Written for someone
 
 **Hard stop: LeetCode starts no later than Friday, Oct 9, 2026.** Anything not covered here gets learned on real problems.
 
+## Where am I?
+
+**Terminal > Run Task > Primer progress.** It shows every lesson's test count and tells you the exact file to open next. Start there every session.
+
+## The loop for every lesson
+
+1. **Open the lesson notes** (click the link below). They open formatted. Read top to bottom.
+2. **Predict the output** at the bottom of the notes. Write your guesses before opening the answers.
+3. **Click the "Exercises" link** at the top of the notes. The exercise file opens.
+   Tip: drag the exercise tab to the right half of the window so the notes and the code are side by side.
+4. **Write code** where each `raise NotImplementedError` is. Press **Ctrl+Shift+B** to run the tests. The bottom panel shows `ok`, `FAIL` (with what was expected), or `TODO`. Repeat until everything says `ok`.
+5. **Push** (Source Control icon on the left: type a message, Commit, Sync), then tell Claude **"lesson NN done."**
+
+Lesson 08 is different: every function is already written and broken. Find the bug, fix it with the smallest change, and comment what was wrong.
+
 ## Schedule
 
-| | Lessons | Time |
-|---|---|---|
-| **Day 1** | [01 Basics](01-basics.md) · [02 Lists](02-lists.md) · [03 Strings](03-strings.md) · [04 Dicts and sets](04-dicts-sets.md) | ~3–4 h |
-| **Day 2** | [05 deque, heapq, bisect](05-deque-heap-bisect.md) · [06 Functions, recursion, classes](06-functions-recursion-classes.md) · [07 Built-ins, math, bits](07-builtins-math-bits.md) · [08 Complexity and gotchas](08-complexity-gotchas.md) | ~3–4 h |
-| **Exit test** | 10 rapid-fire questions from Claude, mixed across all eight lessons | 20 min |
+| Day | Lessons | Exercises | Time |
+|---|---|---|---|
+| **Tue** | [01 Basics](01-basics.md) · [02 Lists](02-lists.md) | 12 | ~2 h |
+| **Wed** | [03 Strings](03-strings.md) · [04 Dicts and sets](04-dicts-sets.md) · [05 deque, heapq, bisect](05-deque-heap-bisect.md) | 22 | ~3 h |
+| **Thu** | [06 Recursion and classes](06-functions-recursion-classes.md) · [07 Built-ins, math, bits](07-builtins-math-bits.md) · [08 Gotchas](08-complexity-gotchas.md) · exit test | 28 | ~3.5 h |
+| **Fri** | Crash course "Arrays and strings," then #88 Merge Sorted Array | | |
 
-## How to do each lesson
-
-1. Read the lesson. Do the **Predict the output** section *before* opening the answers. Write your guesses down.
-2. Open the matching file in [`exercises/`](exercises/), replace each `raise NotImplementedError`, and run it on your computer:
-   ```
-   cd python-primer/exercises
-   python3 ex01_basics.py
-   ```
-   Each test prints `ok`, `FAIL`, or `TODO`. Get them all to `ok` without looking anything up beyond the lesson.
-3. Push your work (or paste it to Claude). Claude reviews it for idiomatic Python, not just passing tests, then asks you a few questions about the lesson.
-4. Tick the box below.
-
-Exercise 08 is different: every function is already written and broken. Find the bug, fix it with the smallest change, and comment what was wrong.
+Stuck more than 10 minutes on one exercise? Skip it, finish the lesson, come back, and bring it to Claude if it's still stuck. Running behind? Cut lesson 07's bit half first, then lesson 08's exercises. Never cut 02, 04, 05, or 06.
 
 ## Checklist
 

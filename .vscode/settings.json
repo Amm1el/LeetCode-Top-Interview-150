@@ -1,0 +1,12 @@
+{
+    // Open lesson notes formatted instead of as raw Markdown.
+    // To edit a .md file instead: right-click it > Open With... > Text Editor.
+    "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+    },
+    // Run Python files from their own folder so `from _check import ...` always works.
+    "python.terminal.executeInFileDir": true,
+    "files.exclude": {
+        "**/__pycache__": true
+    }
+}

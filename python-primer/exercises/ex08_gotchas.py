@@ -1,5 +1,5 @@
 """08 · Gotchas. Every function below is BROKEN. Find the bug, fix it with the smallest
-change, and write a one-line comment explaining what was wrong. Run: python3 ex08_gotchas.py
+change, and write a one-line comment explaining what was wrong. Ctrl+Shift+B runs the tests.
 
 Delete the `raise NotImplementedError` line in each function once you've fixed it."""
 from collections import deque

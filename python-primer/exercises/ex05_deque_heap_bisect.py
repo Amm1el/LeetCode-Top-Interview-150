@@ -1,5 +1,4 @@
-"""05 · deque, heapq, bisect. Replace each `raise NotImplementedError` and run:
-python3 ex05_deque_heap_bisect.py"""
+"""05 · deque, heapq, bisect. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
 import bisect
 import heapq
 from collections import deque

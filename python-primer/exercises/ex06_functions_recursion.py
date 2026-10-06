@@ -1,5 +1,4 @@
-"""06 · Functions, recursion, classes. Replace each `raise NotImplementedError` and run:
-python3 ex06_functions_recursion.py"""
+"""06 · Functions, recursion, classes. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
 from functools import cache
 from typing import List, Optional
 from _check import eq

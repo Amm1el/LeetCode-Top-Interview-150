@@ -1,4 +1,4 @@
-"""01 · Basics. Replace each `raise NotImplementedError` and run: python3 ex01_basics.py"""
+"""01 · Basics. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
 from _check import eq
 
 

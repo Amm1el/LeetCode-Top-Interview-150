@@ -1,4 +1,4 @@
-"""02 · Lists. Replace each `raise NotImplementedError` and run: python3 ex02_lists.py"""
+"""02 · Lists. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
 from _check import eq
 
 

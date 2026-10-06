@@ -1,5 +1,4 @@
-"""07 · Built-ins, itertools, math, bits. Replace each `raise NotImplementedError` and run:
-python3 ex07_builtins_math_bits.py"""
+"""07 · Built-ins, itertools, math, bits. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
 import math
 from itertools import accumulate, combinations, groupby
 from _check import eq
