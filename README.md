@@ -6,25 +6,21 @@ _Dashboard generated 2026-10-06 by `scripts/tracker.py build`._
 
 ## Progress
 
-**3 / 150** `█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░` 2%
+**0 / 150** `░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░` 0%
 
 | Easy | Medium | Hard | Solved with help | Current streak |
 |---|---|---|---|---|
-| 2 | 1 | 0 | 0 | 0 days |
+| 0 | 0 | 0 | 0 | 0 days |
 
 ## Due for a cold re-solve
 
-| # | Problem | Confidence | Due |
-|---|---|---|---|
-| 26 | [Remove Duplicates from Sorted Array](problems/0026-remove-duplicates-from-sorted-array/NOTES.md) | — | not yet checked |
-| 27 | [Remove Element](problems/0027-remove-element/NOTES.md) | — | not yet checked |
-| 80 | [Remove Duplicates from Sorted Array II](problems/0080-remove-duplicates-from-sorted-array-ii/NOTES.md) | — | not yet checked |
+Nothing due.
 
 ## By category
 
 | Category | Done | |
 |---|---|---|
-| Array / String | 3/24 | `█░░░░░░░░░` |
+| Array / String | 0/24 | `░░░░░░░░░░` |
 | Two Pointers | 0/5 | `░░░░░░░░░░` |
 | Sliding Window | 0/4 | `░░░░░░░░░░` |
 | Matrix | 0/5 | `░░░░░░░░░░` |
@@ -52,20 +48,15 @@ _Dashboard generated 2026-10-06 by `scripts/tracker.py build`._
 
 Details and templates in [PATTERNS.md](PATTERNS.md).
 
-- **Two pointers (read/write)** (3): [26](problems/0026-remove-duplicates-from-sorted-array/NOTES.md), [27](problems/0027-remove-element/NOTES.md), [80](problems/0080-remove-duplicates-from-sorted-array-ii/NOTES.md)
 
 ## All problems
 
 | # | Problem | Difficulty | Category | Pattern | Lang | Status | Confidence | Code | Notes |
 |---|---|---|---|---|---|---|---|---|---|
-| 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | Easy | Array / String | Two pointers (read/write) | Java | solved | — | [code](problems/0026-remove-duplicates-from-sorted-array/solution.java) | [notes](problems/0026-remove-duplicates-from-sorted-array/NOTES.md) |
-| 27 | [Remove Element](https://leetcode.com/problems/remove-element/) | Easy | Array / String | Two pointers (read/write) | Java | solved | — | [code](problems/0027-remove-element/solution.java) | [notes](problems/0027-remove-element/NOTES.md) |
-| 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | Medium | Array / String | Two pointers (read/write) | Java | solved | — | [code](problems/0080-remove-duplicates-from-sorted-array-ii/solution.java) | [notes](problems/0080-remove-duplicates-from-sorted-array-ii/NOTES.md) |
-| 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy | Array / String |  | Python | in-progress | — | [code](problems/0169-majority-element/solution.py) | [notes](problems/0169-majority-element/NOTES.md) |
 
 ## Weekly at-a-glance
 
-None yet.
+- [2026-W41](weekly/2026-W41.md)
 
 ## How this repo works
 

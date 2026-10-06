@@ -6,11 +6,13 @@ Be direct. If an answer is vague, hand-wavy, or wrong, say so and ask again. Do 
 
 ## When he reports a problem
 
-1. **Get the code.** Ask him to paste it or push it. Note whether he used a hint, the editorial, or AI help at any point; if so, status is `assisted`. No judgement, but it must be recorded.
+He solves on his iPad and reports later from his computer, so the check happens hours after solving. That delay is fine; it tests retention. Always ask which day he solved it and pass `--date` to `new`.
+
+1. **Get the code.** Ask him to paste it (copy from his LeetCode submission) or push it. Note whether he used a hint, the editorial, or AI help at any point; if so, status is `assisted`. No judgement, but it must be recorded.
 2. **Scaffold it** (skip if the folder exists):
    ```
    python3 scripts/tracker.py new <id> "<Title>" --difficulty <Easy|Medium|Hard> \
-       --category "<study-plan section>" --pattern "<pattern>" --language <python|java> [--status assisted]
+       --category "<study-plan section>" --pattern "<pattern>" [--status assisted] --date <YYYY-MM-DD>
    ```
    Put his code in `solution.<ext>` exactly as written. Do not "clean it up".
 3. **Run the comprehension check** (below).
@@ -67,6 +69,7 @@ At the start of a session, if anything is due, say so before he starts something
 
 ## Conventions
 
+- Python only. If code arrives in another language, ask him to redo it in Python.
 - Folder: `problems/NNNN-slug/` with `solution.<ext>` and `NOTES.md`. The slug matches the LeetCode URL.
 - `category` is the Top Interview 150 section (see `CATEGORIES` in `scripts/tracker.py`); use `Other` for problems outside the plan. `pattern` is the technique, which can differ from the category (Remove Element sits in Array / String but its pattern is two pointers).
 - Never edit the front matter's dates or confidence by hand; use `log` so the schedule stays consistent.
