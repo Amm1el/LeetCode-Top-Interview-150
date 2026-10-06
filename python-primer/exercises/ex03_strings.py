@@ -1,80 +1,95 @@
-"""03 · Strings. Replace each `raise NotImplementedError`. Ctrl+Shift+B runs the tests."""
-from _check import eq
+# ══════════════════════════════════════════════════════════════════════
+# LESSON 03 · STRINGS
+# Notes: ../03-strings.md
+#
+# 1. Write your code where each `raise NotImplementedError` is.
+# 2. Ctrl+Shift+B runs the tests. Bottom panel: ok / FAIL / TODO.
+# 3. Repeat until everything says ok.
+#
+# (Tests live in tests/test_ex03_strings.py. You don't need to open them.)
+# ══════════════════════════════════════════════════════════════════════
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 1. is_palindrome_alnum                                    LeetCode 125
+# ──────────────────────────────────────────────────────────────────────
+# Ignoring case and non-alphanumeric characters, is s a palindrome? Do
+# it with two indices moving inward, O(1) extra space (no building a
+# cleaned copy).
+#
+#   is_palindrome_alnum('A man, a plan, a canal: Panama')  ->  True
+#   is_palindrome_alnum('race a car')                      ->  False
+#   is_palindrome_alnum(' ')                               ->  True
+# ══════════════════════════════════════════════════════════════════════
 def is_palindrome_alnum(s: str) -> bool:
-    """LeetCode 125: ignoring case and non-alphanumeric characters, is s a palindrome?
-    Do it with two indices moving inward, O(1) extra space (no building a cleaned copy)."""
     raise NotImplementedError
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 2. reverse_words                                          LeetCode 151
+# ──────────────────────────────────────────────────────────────────────
+# Reverse the order of words; collapse any extra spaces.
+#
+#   reverse_words('the sky is blue')   ->  'blue is sky the'
+#   reverse_words('  hello world  ')   ->  'world hello'
+#   reverse_words('a good   example')  ->  'example good a'
+# ══════════════════════════════════════════════════════════════════════
 def reverse_words(s: str) -> str:
-    """LeetCode 151: reverse the order of words; collapse any extra spaces."""
     raise NotImplementedError
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 3. anagram_key
+# ──────────────────────────────────────────────────────────────────────
+# Return a string such that two words are anagrams iff their keys are
+# equal.
+#
+#   anagram_key("listen") == anagram_key("silent")  ->  True
+#   anagram_key("ab") == anagram_key("abb")         ->  False
+# ══════════════════════════════════════════════════════════════════════
 def anagram_key(word: str) -> str:
-    """Return a string such that two words are anagrams iff their keys are equal."""
     raise NotImplementedError
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 4. letter_counts
+# ──────────────────────────────────────────────────────────────────────
+# s is lowercase a-z. Return a 26-element list of counts using ord().
+#
+#   letter_counts("abca")  ->  [2, 1, 1, 0, 0, ..., 0]   (26 numbers)
+# ══════════════════════════════════════════════════════════════════════
 def letter_counts(s: str) -> list:
-    """s is lowercase a-z. Return a 26-element list of counts using ord()."""
     raise NotImplementedError
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 5. compress
+# ──────────────────────────────────────────────────────────────────────
+# Run-length encode: 'aaabcc' -> 'a3bc2' (counts of 1 are omitted).
+# Build with a list of parts and one join.
+#
+#   compress('aaabcc')  ->  'a3bc2'
+#   compress('abc')     ->  'abc'
+#   compress('')        ->  ''
+# ══════════════════════════════════════════════════════════════════════
 def compress(s: str) -> str:
-    """Run-length encode: 'aaabcc' -> 'a3bc2' (counts of 1 are omitted).
-    Build with a list of parts and one join."""
     raise NotImplementedError
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 6. swap_first_last
+# ──────────────────────────────────────────────────────────────────────
+# Swap the first and last characters. Strings of length < 2 come back
+# unchanged.
+#
+#   swap_first_last('hello')  ->  'oellh'
+#   swap_first_last('a')      ->  'a'
+#   swap_first_last('')       ->  ''
+# ══════════════════════════════════════════════════════════════════════
 def swap_first_last(s: str) -> str:
-    """Swap the first and last characters. Strings of length < 2 come back unchanged."""
     raise NotImplementedError
-
-
-# ------------------------------------------------------------------ tests
-
-def test_is_palindrome_alnum():
-    eq(is_palindrome_alnum("A man, a plan, a canal: Panama"), True)
-    eq(is_palindrome_alnum("race a car"), False)
-    eq(is_palindrome_alnum(" "), True)
-    eq(is_palindrome_alnum("0P"), False)
-
-
-def test_reverse_words():
-    eq(reverse_words("the sky is blue"), "blue is sky the")
-    eq(reverse_words("  hello world  "), "world hello")
-    eq(reverse_words("a good   example"), "example good a")
-
-
-def test_anagram_key():
-    eq(anagram_key("listen") == anagram_key("silent"), True)
-    eq(anagram_key("ab") == anagram_key("abb"), False)
-    assert isinstance(anagram_key("x"), str), "return a str"
-
-
-def test_letter_counts():
-    c = letter_counts("abca")
-    eq(len(c), 26)
-    eq(c[:3], [2, 1, 1])
-    eq(sum(c), 4)
-
-
-def test_compress():
-    eq(compress("aaabcc"), "a3bc2")
-    eq(compress("abc"), "abc")
-    eq(compress(""), "")
-    eq(compress("zzzzzzzzzzzz"), "z12")
-
-
-def test_swap_first_last():
-    eq(swap_first_last("hello"), "oellh")
-    eq(swap_first_last("a"), "a")
-    eq(swap_first_last(""), "")
 
 
 if __name__ == "__main__":
-    from _check import run
-    run(globals())
+    from _check import run_tests
+    run_tests(__file__)

@@ -6,7 +6,10 @@
     },
     // Run Python files from their own folder so `from _check import ...` always works.
     "python.terminal.executeInFileDir": true,
+    // Hide test plumbing from the file list; the exercise files are all you need.
     "files.exclude": {
-        "**/__pycache__": true
+        "**/__pycache__": true,
+        "python-primer/exercises/tests": true,
+        "python-primer/exercises/_check.py": true
     }
 }

@@ -1,26 +1,50 @@
-"""08 · Gotchas. Every function below is BROKEN. Find the bug, fix it with the smallest
-change, and write a one-line comment explaining what was wrong. Ctrl+Shift+B runs the tests.
+# ══════════════════════════════════════════════════════════════════════
+# LESSON 08 · GOTCHAS: FIX THE BUGS
+# Notes: ../08-complexity-gotchas.md
+#
+# Every function below is already written and BROKEN.
+# 1. Delete the `raise NotImplementedError` line in a function.
+# 2. Run the tests (Ctrl+Shift+B) and read the error.
+# 3. Fix the bug with the smallest change, and add a one-line
+#    comment saying what was wrong.
+#
+# (Tests live in tests/test_ex08_gotchas.py. You don't need to open them.)
+# ══════════════════════════════════════════════════════════════════════
 
-Delete the `raise NotImplementedError` line in each function once you've fixed it."""
 from collections import deque
 import heapq
-from _check import eq
 
 
+# Given (LeetCode defines this for you, don't change it)
 class Node:
     def __init__(self, val, next=None):
         self.val = val
         self.next = next
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 1. remove_zeros
+# ──────────────────────────────────────────────────────────────────────
+# Remove all zeros from nums in place, keeping order.
+#
+#   nums = [0, 1, 0, 3, 12]
+#   remove_zeros(nums)
+#   nums should now be [1, 3, 12]
+# ══════════════════════════════════════════════════════════════════════
 def remove_zeros(nums: list) -> None:
-    """Remove all zeros from nums in place, keeping order."""
     raise NotImplementedError
     nums = [x for x in nums if x != 0]
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 2. all_paths
+# ──────────────────────────────────────────────────────────────────────
+# Every binary string of length n as a list of ints, e.g. n=2 ->
+# [[0,0],[0,1],[1,0],[1,1]].
+#
+#   all_paths(2)  ->  [[0, 0], [0, 1], [1, 0], [1, 1]]
+# ══════════════════════════════════════════════════════════════════════
 def all_paths(n: int) -> list:
-    """Every binary string of length n as a list of ints, e.g. n=2 -> [[0,0],[0,1],[1,0],[1,1]]."""
     raise NotImplementedError
     res, path = [], []
 
@@ -37,8 +61,15 @@ def all_paths(n: int) -> list:
     return res
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 3. count_nodes_bfs
+# ──────────────────────────────────────────────────────────────────────
+# Number of nodes reachable from start (including start).
+#
+#   count_nodes_bfs({1: [2, 3], 2: [4], 3: [4], 4: []}, 1)
+#     ->  4
+# ══════════════════════════════════════════════════════════════════════
 def count_nodes_bfs(graph: dict, start) -> int:
-    """Number of nodes reachable from start (including start)."""
     raise NotImplementedError
     seen = set()
     q = deque([start])
@@ -53,8 +84,16 @@ def count_nodes_bfs(graph: dict, start) -> int:
     return count
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 4. tree_sum
+# ──────────────────────────────────────────────────────────────────────
+# Sum of node values in a binary tree given as nested tuples (val,
+# left, right) or None.
+#
+#   tree_sum((1, (2, None, None), (3, (4, None, None), None)))  ->  10
+#   tree_sum(None)                                              ->  0
+# ══════════════════════════════════════════════════════════════════════
 def tree_sum(root) -> int:
-    """Sum of node values in a binary tree given as nested tuples (val, left, right) or None."""
     raise NotImplementedError
     total = 0
 
@@ -70,8 +109,15 @@ def tree_sum(root) -> int:
     return total
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 5. merge_k_linked
+# ──────────────────────────────────────────────────────────────────────
+# Merge sorted linked lists (Node objects) and return the values as a
+# Python list.
+#
+#   merge_k_linked([a, b, None])  ->  [1, 1, 3, 4]
+# ══════════════════════════════════════════════════════════════════════
 def merge_k_linked(heads: list) -> list:
-    """Merge sorted linked lists (Node objects) and return the values as a Python list."""
     raise NotImplementedError
     h = []
     for node in heads:
@@ -86,9 +132,16 @@ def merge_k_linked(heads: list) -> list:
     return out
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 6. window_max_count
+# ──────────────────────────────────────────────────────────────────────
+# How many windows of size k have their maximum at the window's last
+# position? (A deliberately simple brute force; the bug is not about
+# efficiency.)
+#
+#   window_max_count([1, 3, 2, 5, 4, 6], 2)  ->  3
+# ══════════════════════════════════════════════════════════════════════
 def window_max_count(nums: list, k: int) -> int:
-    """How many windows of size k have their maximum at the window's last position?
-    (A deliberately simple brute force; the bug is not about efficiency.)"""
     raise NotImplementedError
     max = 0
     for i in range(k - 1, len(nums)):
@@ -98,14 +151,31 @@ def window_max_count(nums: list, k: int) -> int:
     return max
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 7. make_board
+# ──────────────────────────────────────────────────────────────────────
+# n x n board of '.' strings where each row can be edited
+# independently.
+#
+#   b = make_board(3)
+#   b[0][0] = "Q"
+#   only row 0 should change: [row[0] for row in b] == ["Q", ".", "."]
+# ══════════════════════════════════════════════════════════════════════
 def make_board(n: int) -> list:
-    """n x n board of '.' strings where each row can be edited independently."""
     raise NotImplementedError
     return [["."] * n] * n
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 8. contains
+# ──────────────────────────────────────────────────────────────────────
+# Does nums contain target? (Written the long way on purpose.)
+#
+#   contains([5, 6], 6)  ->  True
+#   contains([5, 6], 5)  ->  True
+#   contains([5, 6], 9)  ->  False
+# ══════════════════════════════════════════════════════════════════════
 def contains(nums: list, target) -> bool:
-    """Does nums contain target? (Written the long way on purpose.)"""
     raise NotImplementedError
     idx = None
     for i, x in enumerate(nums):
@@ -115,8 +185,15 @@ def contains(nums: list, target) -> bool:
     return True if idx else False
 
 
+# ══════════════════════════════════════════════════════════════════════
+# 9. safe_lookup_count
+# ──────────────────────────────────────────────────────────────────────
+# For each query, how many times it appears in words. Must not add
+# queries to the counts.
+#
+#   safe_lookup_count(['a', 'b', 'a'], ['a', 'z'])  ->  [2, 0]
+# ══════════════════════════════════════════════════════════════════════
 def safe_lookup_count(words: list, queries: list) -> list:
-    """For each query, how many times it appears in words. Must not add queries to the counts."""
     raise NotImplementedError
     from collections import defaultdict
     counts = defaultdict(int)
@@ -127,53 +204,6 @@ def safe_lookup_count(words: list, queries: list) -> list:
     return answer
 
 
-# ------------------------------------------------------------------ tests
-
-def test_remove_zeros():
-    a = [0, 1, 0, 3, 12]
-    remove_zeros(a)
-    eq(a, [1, 3, 12])
-
-
-def test_all_paths():
-    eq(all_paths(2), [[0, 0], [0, 1], [1, 0], [1, 1]])
-
-
-def test_count_nodes_bfs():
-    eq(count_nodes_bfs({1: [2, 3], 2: [4], 3: [4], 4: [], 5: [1]}, 1), 4)
-
-
-def test_tree_sum():
-    eq(tree_sum((1, (2, None, None), (3, (4, None, None), None))), 10)
-    eq(tree_sum(None), 0)
-
-
-def test_merge_k_linked():
-    a = Node(1, Node(4))
-    b = Node(1, Node(3))
-    eq(merge_k_linked([a, b, None]), [1, 1, 3, 4])
-
-
-def test_window_max_count():
-    eq(window_max_count([1, 3, 2, 5, 4, 6], 2), 3)
-
-
-def test_make_board():
-    b = make_board(3)
-    b[0][0] = "Q"
-    eq([row[0] for row in b], ["Q", ".", "."])
-
-
-def test_contains():
-    eq(contains([5, 6], 6), True)
-    eq(contains([5, 6], 5), True)
-    eq(contains([5, 6], 9), False)
-
-
-def test_safe_lookup_count():
-    eq(safe_lookup_count(["a", "b", "a"], ["a", "z"]), [2, 0])
-
-
 if __name__ == "__main__":
-    from _check import run
-    run(globals())
+    from _check import run_tests
+    run_tests(__file__)
