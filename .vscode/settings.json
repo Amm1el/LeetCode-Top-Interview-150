@@ -1,15 +1,15 @@
 {
-    // Open lesson notes formatted instead of as raw Markdown.
-    // To edit a .md file instead: right-click it > Open With... > Text Editor.
+    // Markdown files (READMEs) open formatted.
+    // To edit one instead: right-click it > Open With... > Text Editor.
     "workbench.editorAssociations": {
         "*.md": "vscode.markdown.preview.editor"
     },
-    // Run Python files from their own folder so `from _check import ...` always works.
-    "python.terminal.executeInFileDir": true,
-    // Hide test plumbing from the file list; the exercise files are all you need.
+    // Notebooks run from their own folder so the setup cell finds _primer/.
+    "jupyter.notebookFileRoot": "${fileDirname}",
+    // Hide plumbing from the file list; the lesson notebooks are all you need.
     "files.exclude": {
         "**/__pycache__": true,
-        "python-primer/exercises/tests": true,
-        "python-primer/exercises/_check.py": true
+        "**/.ipynb_checkpoints": true,
+        "python-primer/_primer": true
     }
 }

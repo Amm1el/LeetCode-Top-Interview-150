@@ -4,28 +4,40 @@ The Python you need for Top Interview 150, and nothing else. Written for someone
 
 **Hard stop: LeetCode starts no later than Friday, Oct 9, 2026.** Anything not covered here gets learned on real problems.
 
-## Where am I?
+## First time only (5 min)
 
-**Terminal > Run Task > Primer progress.** It shows every lesson's test count and tells you the exact file to open next. Start there every session.
+1. Open the repo in VS Code. Accept the popup to install the recommended **Python** and **Jupyter** extensions.
+2. Open `01-basics.ipynb`. Click **Select Kernel** (top right) → **Python Environments** → your Python 3.10+.
+3. Run the first cell (Shift+Enter). If VS Code asks to install **ipykernel**, click **Install**.
 
-## The loop for every lesson
+## How each lesson works
 
-1. **Open the lesson notes** (click the link below). They open formatted. Read top to bottom.
-2. **Predict the output** at the bottom of the notes. Write your guesses before opening the answers.
-3. **Click the "Exercises" link** at the top of the notes. The exercise file opens.
-   Tip: drag the exercise tab to the right half of the window so the notes and the code are side by side.
-4. **Write code** where each `raise NotImplementedError` is. Press **Ctrl+Shift+B** to run the tests. The bottom panel shows `ok`, `FAIL` (with what was expected), or `TODO`. Repeat until everything says `ok`.
-5. **Push** (Source Control icon on the left: type a message, Commit, Sync), then tell Claude **"lesson NN done."**
+Each lesson is one notebook: notes, runnable examples, and exercises in a single file. Work top to bottom.
 
-Lesson 08 is different: every function is already written and broken. Find the bug, fix it with the smallest change, and comment what was wrong.
+| Cell | What to do |
+|---|---|
+| **Setup** (first cell) | Run it every time you open the notebook. |
+| **Examples** | Run them, then change something and run again. |
+| **Try it** | Your scratch space under each section. Experiment. |
+| **Predict the output** | Type your guess into the `# My guess:` line **before** running. The output is the answer. |
+| **Exercise** | Replace `raise NotImplementedError` with your code and run the cell. |
+| **check(...)** | Run it right after its exercise: `ok`, `FAIL` (shows what was expected), or `TODO`. |
+| **summary()** | At the end, every result in one place. |
+| **My traps** | Double-click and write 3–5 traps in your own words. |
+
+Then save (Ctrl+S), commit and sync, and tell Claude **"lesson NN done."**
+
+**Where am I?** Press **Ctrl+Shift+B** (or Terminal > Run Task > Primer progress) for every lesson's test count and what to open next.
+
+If you restart VS Code or the kernel, the notebook forgets everything you ran. Use **Run All** at the top to get back to where you were.
 
 ## Schedule
 
 | Day | Lessons | Exercises | Time |
 |---|---|---|---|
-| **Tue** | [01 Basics](01-basics.md) · [02 Lists](02-lists.md) | 12 | ~2 h |
-| **Wed** | [03 Strings](03-strings.md) · [04 Dicts and sets](04-dicts-sets.md) · [05 deque, heapq, bisect](05-deque-heap-bisect.md) | 22 | ~3 h |
-| **Thu** | [06 Recursion and classes](06-functions-recursion-classes.md) · [07 Built-ins, math, bits](07-builtins-math-bits.md) · [08 Gotchas](08-complexity-gotchas.md) · exit test | 28 | ~3.5 h |
+| **Tue** | [01 Basics](01-basics.ipynb) · [02 Lists](02-lists.ipynb) | 12 | ~2 h |
+| **Wed** | [03 Strings](03-strings.ipynb) · [04 Dicts and sets](04-dicts-sets.ipynb) · [05 deque, heapq, bisect](05-deque-heap-bisect.ipynb) | 22 | ~3 h |
+| **Thu** | [06 Recursion and classes](06-functions-recursion-classes.ipynb) · [07 Built-ins, math, bits](07-builtins-math-bits.ipynb) · [08 Gotchas](08-complexity-gotchas.ipynb) · exit test | 28 | ~3.5 h |
 | **Fri** | Crash course "Arrays and strings," then #88 Merge Sorted Array | | |
 
 Stuck more than 10 minutes on one exercise? Skip it, finish the lesson, come back, and bring it to Claude if it's still stuck. Running behind? Cut lesson 07's bit half first, then lesson 08's exercises. Never cut 02, 04, 05, or 06.

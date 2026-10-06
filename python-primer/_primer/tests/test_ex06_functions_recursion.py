@@ -1,6 +1,6 @@
-"""Tests for ex06_functions_recursion.py. Run the exercise file, not this one."""
-from ex06_functions_recursion import *  # noqa: F401,F403
-from _check import eq
+"""Tests the lesson notebook calls with check(...). You never need to open this."""
+
+from check import eq
 
 
 def _tree():

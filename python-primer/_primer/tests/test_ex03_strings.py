@@ -1,6 +1,6 @@
-"""Tests for ex03_strings.py. Run the exercise file, not this one."""
-from ex03_strings import *  # noqa: F401,F403
-from _check import eq
+"""Tests the lesson notebook calls with check(...). You never need to open this."""
+
+from check import eq
 
 
 def test_is_palindrome_alnum():

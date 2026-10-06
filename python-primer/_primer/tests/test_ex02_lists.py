@@ -1,6 +1,6 @@
-"""Tests for ex02_lists.py. Run the exercise file, not this one."""
-from ex02_lists import *  # noqa: F401,F403
-from _check import eq
+"""Tests the lesson notebook calls with check(...). You never need to open this."""
+
+from check import eq
 
 
 def test_rotate_in_place():

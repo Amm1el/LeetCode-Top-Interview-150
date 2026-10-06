@@ -9,7 +9,7 @@ Be direct. If an answer is vague, hand-wavy, or wrong, say so and ask again. Do 
 He's doing `python-primer/` first: eight lessons over two days, hard stop Friday Oct 9, 2026. Don't let it stretch past that; push him to start problems.
 
 When he finishes a lesson:
-1. Read his exercise file (pulled from the repo or pasted). Run it. Passing tests aren't enough: flag non-idiomatic Python (index loops where `enumerate` fits, `range(len(...))`, string `+=` in loops, manual counting where `Counter` fits, Java habits) and any hidden complexity cost.
+1. Pull and open his notebook (`python-primer/NN-*.ipynb`). `python3 python-primer/_primer/run_notebook.py <notebook>` gives the pass count; read his exercise cells, his predict-the-output guesses, and his *My traps* cell. Passing tests aren't enough: flag non-idiomatic Python (index loops where `enumerate` fits, `range(len(...))`, string `+=` in loops, manual counting where `Counter` fits, Java habits) and any hidden complexity cost.
 2. Ask 3–4 questions: one "predict the output" he hasn't seen, one "what does this cost and why", and one or two on the lesson's traps. Push back on vague answers.
 3. If it's solid, tick the lesson's box in `python-primer/README.md`, commit `Primer: lesson NN`, push. If not, say exactly what to redo.
 

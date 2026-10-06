@@ -1,6 +1,6 @@
-"""Tests for ex05_deque_heap_bisect.py. Run the exercise file, not this one."""
-from ex05_deque_heap_bisect import *  # noqa: F401,F403
-from _check import eq
+"""Tests the lesson notebook calls with check(...). You never need to open this."""
+
+from check import eq
 
 
 def test_shortest_path_len():

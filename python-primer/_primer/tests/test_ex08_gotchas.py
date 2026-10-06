@@ -1,6 +1,6 @@
-"""Tests for ex08_gotchas.py. Run the exercise file, not this one."""
-from ex08_gotchas import *  # noqa: F401,F403
-from _check import eq
+"""Tests the lesson notebook calls with check(...). You never need to open this."""
+
+from check import eq
 
 
 def test_remove_zeros():
