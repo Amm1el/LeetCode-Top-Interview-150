@@ -38,6 +38,31 @@ Exercise 08 is different: every function is already written and broken. Find the
 - [ ] 08 Complexity and gotchas
 - [ ] Exit test (8/10 or better)
 
+## Coverage: every Top 150 section
+
+| Section | Python you need | Lesson |
+|---|---|---|
+| Array / String | indexing, slicing, in-place `nums[:] =`, string building, `ord`/`chr` | 01, 02, 03 |
+| Two Pointers | `while lo < hi`, multiple assignment | 01, 02 |
+| Sliding Window | dict/Counter of the window, `deque` | 04, 05 |
+| Matrix | 2D grids, `zip(*m)`, neighbor loops | 02 |
+| Hashmap | dict, set, Counter, defaultdict, hashable keys | 04 |
+| Intervals | sort with `key=lambda` | 02 |
+| Stack | list as stack, `int(a / b)` truncation | 01, 02 |
+| Linked List | ListNode, dummy node, OrderedDict for LRU Cache | 06 |
+| Binary Tree General / BFS / BST | TreeNode, recursion, `nonlocal`, level-order `deque` | 05, 06 |
+| Graph General / BFS | adjacency from edge lists, BFS, iterative DFS | 05 |
+| Trie | writing your own class with a children dict | 06 |
+| Backtracking | append / recurse / pop, `path[:]` | 02, 06 |
+| Divide & Conquer | recursion on index ranges (not slices) | 02, 06 |
+| Kadane's Algorithm | running max with `float('-inf')` | 01 |
+| Binary Search | `bisect`, the `[lo, hi)` template | 05 |
+| Heap | `heapq`, max-heap by negation, tiebreakers | 05 |
+| Bit Manipulation | bit ops, 32-bit masks | 07 |
+| Math | `//`, `%`, `math`, no overflow | 01, 07 |
+| 1D / Multidimensional DP | `@cache`, 2D tables | 02, 06 |
+| Design problems (Min Stack, RandomizedSet, LRU) | classes, `self.`, `random.choice` | 06 |
+
 ## Not covered on purpose
 
 Classes beyond what LeetCode gives you, file I/O, exceptions beyond what you'll see in errors, async, typing beyond reading signatures, and third-party libraries (LeetCode doesn't have `sortedcontainers` everywhere; don't rely on it). The algorithm patterns themselves (two pointers, sliding window, DFS/BFS, DP) are learned through the problems and recorded in [PATTERNS.md](../PATTERNS.md).

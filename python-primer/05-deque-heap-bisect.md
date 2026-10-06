@@ -34,6 +34,30 @@ def bfs(graph, start):
     return dist
 ```
 
+**Building the graph.** Graph problems usually give an edge list, not an adjacency dict. Build it first:
+
+```python
+from collections import defaultdict
+graph = defaultdict(list)
+for a, b in edges:
+    graph[a].append(b)
+    graph[b].append(a)        # drop this line for directed edges
+```
+
+Course Schedule style problems give `[course, prereq]` pairs, which are directed. Grid problems don't need a graph at all; the neighbors are the four directions (lesson 02).
+
+**Iterative DFS:** same as BFS with a list as a stack (`stack.pop()` instead of `q.popleft()`). Use it when recursion might exceed the depth limit (lesson 06).
+
+```python
+stack, seen = [start], {start}
+while stack:
+    node = stack.pop()
+    for nxt in graph[node]:
+        if nxt not in seen:
+            seen.add(nxt)
+            stack.append(nxt)
+```
+
 Level by level (needed for many tree problems):
 
 ```python

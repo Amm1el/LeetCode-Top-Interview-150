@@ -100,6 +100,56 @@ def backtrack(start):
 backtrack(0)
 ```
 
+## Writing your own class (design problems)
+
+Several Top 150 problems hand you an empty class to implement: Min Stack, Implement Trie, LRU Cache, Insert Delete GetRandom O(1). LeetCode creates your object and calls the methods; you pick the fields.
+
+```python
+class MinStack:
+    def __init__(self):
+        self.stack = []          # fields live on self
+        self.mins = []           # mins[i] = min of stack[0..i]
+
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        self.mins.append(min(val, self.mins[-1]) if self.mins else val)
+
+    def getMin(self) -> int:
+        return self.mins[-1]
+```
+
+Forgetting `self.` is the usual bug: `stack.append(val)` inside a method looks for a local `stack` and raises `NameError`.
+
+**Trie:** a node is just a dict of children plus an end flag.
+
+```python
+class TrieNode:
+    def __init__(self):
+        self.children = {}       # char -> TrieNode
+        self.end = False
+
+node = root
+for c in word:
+    if c not in node.children:
+        node.children[c] = TrieNode()
+    node = node.children[c]
+node.end = True
+```
+
+**LRU Cache:** `OrderedDict` is a dict that remembers order and can move keys around in O(1).
+
+```python
+from collections import OrderedDict
+cache = OrderedDict()
+cache[k] = v
+cache.move_to_end(k)          # mark k as most recently used
+cache.popitem(last=False)     # evict the least recently used (the front)
+```
+
+Interviewers sometimes ask for LRU Cache *without* OrderedDict, meaning a hash map plus your own doubly linked list. Know that `OrderedDict` exists, and be ready to explain why the hand-built version is O(1).
+
+**Random:** `import random`, then `random.choice(lst)` picks a uniform random element in O(1) (lists only, not sets) and `random.randint(a, b)` is inclusive on both ends.
+
 ## Lambdas and the mutable default trap
 
 `key=lambda x: x[1]` is an inline one-expression function. Use it for sort keys; don't build logic in it.

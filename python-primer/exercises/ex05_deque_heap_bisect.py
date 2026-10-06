@@ -46,6 +46,13 @@ def search_insert(nums: list, target: int) -> int:
     raise NotImplementedError
 
 
+def count_components(n: int, edges: list) -> int:
+    """Nodes are 0..n-1, edges are undirected pairs. Build an adjacency list with
+    defaultdict(list), then count connected components using ITERATIVE DFS (a list as a stack).
+    Must not hit the recursion limit on a 20,000-node chain."""
+    raise NotImplementedError
+
+
 class RecentCounter:
     """LeetCode 933: ping(t) records a request at time t (strictly increasing) and returns
     how many requests happened in [t - 3000, t]. Keep a deque and drop old ones from the left."""
@@ -97,6 +104,12 @@ def test_search_insert():
     eq(search_insert([1, 3, 5, 6], 2), 1)
     eq(search_insert([1, 3, 5, 6], 7), 4)
     eq(search_insert([1, 3, 5, 6], 0), 0)
+
+
+def test_count_components():
+    eq(count_components(5, [[0, 1], [1, 2], [3, 4]]), 2)
+    eq(count_components(3, []), 3)
+    eq(count_components(20000, [[i, i + 1] for i in range(19999)]), 1)
 
 
 def test_recent_counter():
